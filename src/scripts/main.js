@@ -1,6 +1,6 @@
 AOS.init();
 
-const dataDoEvento = new Date("Dec 12, 2022, 19:00:00");
+const dataDoEvento = new Date("Jul 07, 2024, 19:00:00");
 const timeStampDoEvento = dataDoEvento.getTime();
 
 const contaHoras = setInterval(function() {
@@ -18,7 +18,7 @@ const contaHoras = setInterval(function() {
   const minutosAteOEvento = Math.floor((distanciaAteOEvento % horaEmMs) / minutoEmMs);
   const segundosAteOEvento = Math.floor(distanciaAteOEvento % minutoEmMs) / 1000);
 
-  document.getElementById('contador').innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`
+  document.getElementById('contador').innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento.toFixed(2)}s`
 
   if(distanciaAteOEvento < 0 ) {
     clearInterval(contaHoras);
